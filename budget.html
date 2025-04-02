@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Tracker - Budget</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="logo">BudgetApp</div>
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="icon dashboard"></i>Dashboard</a></li>
+            <li><a href="expenses.html"><i class="icon expenses"></i>Expenses</a></li>
+            <li class="active"><a href="budget.html"><i class="icon budget"></i>Budget</a></li>
+            <li><a href="history.html"><i class="icon history"></i>History</a></li>
+            <li><a href="settings.html"><i class="icon settings"></i>Settings</a></li>
+            <li><a href="auth.html"><i class="icon auth"></i>Sign Out</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <header class="header">
+            <h1>Budget Allocation</h1>
+            <div class="user-profile">
+                <span>Welcome, User</span>
+                <img src="assets/user.png" alt="User">
+            </div>
+        </header>
+
+        <div class="budget-overview">
+            <h2>Monthly Budget Overview</h2>
+            <div class="budget-summary">
+                <div class="budget-summary-item">
+                    <h3>Total Budget</h3>
+                    <p id="total-budget-amount">$0.00</p>
+                </div>
+                <div class="budget-summary-item">
+                    <h3>Budget Used</h3>
+                    <p id="budget-used-amount">$0.00</p>
+                </div>
+                <div class="budget-summary-item">
+                    <h3>Budget Remaining</h3>
+                    <p id="budget-remaining-amount">$0.00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="budget-allocation">
+            <h2>Set Your Budget</h2>
+            <form id="budget-form">
+                <div class="form-group">
+                    <label for="total-budget">Total Monthly Budget</label>
+                    <input type="number" id="total-budget" step="0.01" required>
+                </div>
+                <h3>Category Allocations</h3>
+                <div class="category-budgets">
+                    <div class="category-budget-item">
+                        <label>Food</label>
+                        <input type="number" class="category-budget" data-category="Food" step="0.01">
+                    </div>
+                    <div class="category-budget-item">
+                        <label>Transportation</label>
+                        <input type="number" class="category-budget" data-category="Transportation" step="0.01">
+                    </div>
+                    <div class="category-budget-item">
+                        <label>Housing</label>
+                        <input type="number" class="category-budget" data-category="Housing" step="0.01">
+                    </div>
+                    <div class="category-budget-item">
+                        <label>Entertainment</label>
+                        <input type="number" class="category-budget" data-category="Entertainment" step="0.01">
+                    </div>
+                    <div class="category-budget-item">
+                        <label>Utilities</label>
+                        <input type="number" class="category-budget" data-category="Utilities" step="0.01">
+                    </div>
+                    <div class="category-budget-item">
+                        <label>Other</label>
+                        <input type="number" class="category-budget" data-category="Other" step="0.01">
+                    </div>
+                </div>
+                <button type="submit" class="btn-primary">Save Budget</button>
+            </form>
+        </div>
+
+        <div class="budget-progress">
+            <h2>Budget Progress</h2>
+            <div class="progress-bars">
+                <!-- Filled by JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <script src="js/storage.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
